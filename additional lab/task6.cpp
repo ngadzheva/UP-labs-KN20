@@ -41,8 +41,13 @@ int main() {
         }
 
         if(j != n) {
-            arr[i++] = arr[j];
-            arr[j] = 0;
+            arr[i] = arr[j];
+
+            if (i != j) {
+                arr[j] = 0;
+            }
+            
+            ++i;
         }
     }
 
